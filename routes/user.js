@@ -27,14 +27,14 @@ router.get('/show',(req,res,next)=>{
 
 
 
-router.post("/new", )
+router.post("/new", userController.add )
 
 router.get("/getall", userController.getall );
-router.get("/find/:id", )
+router.get("/find/:id", userController.findbyId)
 
-router.delete("/delete/:id", )
+router.delete("/delete/:id", userController.deletebyid )
 
-router.put('/update/:id', )
+router.put('/update/:id', userController.updatebyid )
 
 
 module.exports = router;

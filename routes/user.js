@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
  const User = require('../models/user');
  const userController = require ("../Controller/userController");
+const validate = require('../midill/Validate');
 
 router.get('/show',(req,res,next)=>{
     res.send('User Page');
@@ -27,12 +28,12 @@ router.get('/show',(req,res,next)=>{
 
 
 
-router.post("/new", userController.add )
+router.post("/new",validate, userController.add )
 
 router.get("/getall", userController.getall );
 router.get("/find/:id", userController.findbyId)
 
-router.delete("/delete/:id", userController.deletebyid )
+router.delete("/delete/:id",userController.deletebyid )
 
 router.put('/update/:id', userController.updatebyid )
 

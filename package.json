@@ -16,6 +16,7 @@
     "http": "^0.0.1-security",
     "mongoose": "^6.9.2",
     "socket.io": "^4.6.1",
+    "twig": "^1.16.0",
     "yup": "^1.0.2"
   }
 }

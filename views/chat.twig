@@ -1,0 +1,24 @@
+ <html>
+<head>
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+<script>
+const socket = io.connect();
+socket.on("msg",(data)=>{
+p= document.createElement("p")
+p.innerText = (data)
+document.body.append(p)
+})
+function send()
+{
+    socket.emit("msg",x.value)
+}
+</script>
+
+</body>
+
+
+
+ </html>

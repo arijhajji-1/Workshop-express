@@ -36,6 +36,11 @@ router.get("/find/:id", userController.findbyId)
 router.delete("/delete/:id",userController.deletebyid )
 
 router.put('/update/:id', userController.updatebyid )
+router.get('/chat',(req,res,next)=>
+{
+    res.render('chat');
+})
+
 
 
 module.exports = router;
